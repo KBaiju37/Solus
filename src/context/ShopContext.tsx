@@ -67,7 +67,7 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
   });
 
   const [ga4Id, setGa4IdState] = useState<string>(() => {
-    return localStorage.getItem('solus_ga4_id') || '';
+    return localStorage.getItem('solus_ga4_id') || 'G-N41ZLSTMTV';
   });
 
   const [eventLogs, setEventLogs] = useState<GAEventLog[]>([]);
