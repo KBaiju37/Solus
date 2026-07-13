@@ -5,9 +5,10 @@
     <script id="ga4-tag" async src="https://www.googletagmanager.com/gtag/js?id=G-N41ZLSTMTV"></script>
     <script id="ga4-config">
       window.dataLayer = window.dataLayer || [];
-      window.gtag = function(){dataLayer.push(arguments);}
-      window.gtag('js', new Date());
-      window.gtag('config', 'G-N41ZLSTMTV');
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', 'G-N41ZLSTMTV');
     </script>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
