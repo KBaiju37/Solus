@@ -12,6 +12,8 @@ import { Checkout } from './pages/Checkout';
 import { ThankYou } from './pages/ThankYou';
 import { Profile } from './pages/Profile';
 import { Admin } from './pages/Admin';
+import { About } from './pages/About';
+import { Contact } from './pages/Contact';
 
 import './App.css'; // Muted css imports are fine
 
@@ -36,6 +38,10 @@ const MainAppContent: React.FC = () => {
         return <Profile />;
       case 'admin':
         return <Admin />;
+      case 'about':
+        return <About />;
+      case 'contact':
+        return <Contact />;
       default:
         return <Home />;
     }

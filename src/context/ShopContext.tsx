@@ -15,9 +15,9 @@ interface ShopContextType {
   addOrder: (order: Order) => void;
   
   // Custom router state
-  activePage: 'home' | 'shop' | 'product' | 'checkout' | 'thank-you' | 'profile' | 'admin';
+  activePage: 'home' | 'shop' | 'product' | 'checkout' | 'thank-you' | 'profile' | 'admin' | 'about' | 'contact';
   selectedProductId: string | null;
-  navigateTo: (page: 'home' | 'shop' | 'product' | 'checkout' | 'thank-you' | 'profile' | 'admin', productId?: string | null) => void;
+  navigateTo: (page: 'home' | 'shop' | 'product' | 'checkout' | 'thank-you' | 'profile' | 'admin' | 'about' | 'contact', productId?: string | null) => void;
   
   // Coupons
   appliedCoupon: string | null;
@@ -73,7 +73,7 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [eventLogs, setEventLogs] = useState<GAEventLog[]>([]);
 
   // Simple SPA Route State
-  const [activePage, setActivePage] = useState<'home' | 'shop' | 'product' | 'checkout' | 'thank-you' | 'profile' | 'admin'>('home');
+  const [activePage, setActivePage] = useState<'home' | 'shop' | 'product' | 'checkout' | 'thank-you' | 'profile' | 'admin' | 'about' | 'contact'>('home');
   const [selectedProductId, setSelectedProductId] = useState<string | null>(null);
 
   // Coupon state
@@ -185,7 +185,7 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
     setTheme(prev => (prev === 'dark' ? 'light' : 'dark'));
   };
 
-  const navigateTo = (page: 'home' | 'shop' | 'product' | 'checkout' | 'thank-you' | 'profile' | 'admin', productId: string | null = null) => {
+  const navigateTo = (page: 'home' | 'shop' | 'product' | 'checkout' | 'thank-you' | 'profile' | 'admin' | 'about' | 'contact', productId: string | null = null) => {
     setActivePage(page);
     setSelectedProductId(productId);
   };

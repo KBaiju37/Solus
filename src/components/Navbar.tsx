@@ -59,6 +59,22 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCart }) => {
             >
               Portal
             </button>
+            <button
+              onClick={() => navigateTo('about')}
+              className={`font-oswald text-sm font-medium tracking-[0.15em] uppercase hover:text-neutral-500 dark:hover:text-neutral-400 transition-colors py-2 border-b-2 ${
+                activePage === 'about' ? 'border-neutral-950 dark:border-white' : 'border-transparent'
+              }`}
+            >
+              About
+            </button>
+            <button
+              onClick={() => navigateTo('contact')}
+              className={`font-oswald text-sm font-medium tracking-[0.15em] uppercase hover:text-neutral-500 dark:hover:text-neutral-400 transition-colors py-2 border-b-2 ${
+                activePage === 'contact' ? 'border-neutral-950 dark:border-white' : 'border-transparent'
+              }`}
+            >
+              Contact
+            </button>
           </div>
 
           {/* Actions */}
